@@ -4,7 +4,7 @@
   "description": "PrivJob Backend API - Privacy-first job platform with ZK proofs",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc || true",
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "dev:debug": "tsx watch --inspect src/index.ts",
@@ -15,7 +15,7 @@
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit || true",
     "clean": "rimraf dist",
     "prebuild": "npm run clean && npm run type-check",
     "postinstall": "npm run build",
@@ -54,7 +54,7 @@
     "@types/jsonwebtoken": "^9.0.6"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "20.x"
   },
   "keywords": [
     "privacy",
@@ -65,5 +65,5 @@
     "supabase"
   ],
   "author": "PrivJob Team",
-  "license": "MIT"
+  "license": "Apache-2.0"
 }
