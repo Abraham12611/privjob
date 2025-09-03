@@ -9,7 +9,8 @@
       "src": "backend/package.json",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "backend/src/**"
+        "includeFiles": "backend/src/**",
+        "maxDuration": 30
       }
     }
   ],
@@ -33,10 +34,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "backend/src/index.js": {
-      "maxDuration": 30
-    }
   }
 }
